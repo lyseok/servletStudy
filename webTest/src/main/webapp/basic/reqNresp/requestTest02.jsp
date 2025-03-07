@@ -18,8 +18,8 @@
 			<option value="*">*</option>
 			<option value="/">/</option>
 		</select>
-		<input type="text" name="input2">
-		<input type="submit" value="확인" size="5">
+		<input type="text" name="input2" size="5">
+		<input type="submit" value="확인">
 	</form>
 </body>
 </html>

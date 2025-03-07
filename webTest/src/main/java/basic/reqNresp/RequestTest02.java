@@ -27,7 +27,7 @@ public class RequestTest02 extends HttpServlet {
 			case "+": result = (double)(input1 + input2); break;
 			case "-": result = (double)(input1 - input2); break;
 			case "*": result = (double)(input1 * input2); break;
-			case "/": result = (double)(input1 / input2); break;
+			case "/": result = (double)input1 / input2; break;
 		}
 		
 		request.setCharacterEncoding("utf-8");
