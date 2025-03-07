@@ -23,11 +23,19 @@ public class RequestTest02 extends HttpServlet {
 		int input2 = Integer.parseInt(request.getParameter("input2"));
 		String op = request.getParameter("op");
 		double result = 0;
+		boolean calcOk = true;
+		
 		switch(op) {
 			case "+": result = (double)(input1 + input2); break;
 			case "-": result = (double)(input1 - input2); break;
 			case "*": result = (double)(input1 * input2); break;
-			case "/": result = (double)input1 / input2; break;
+			case "/": 
+				if(input2 != 0) {
+					result = (double)input1 / input2; 					
+				} else {
+					calcOk = false; // 계산 하지 못한 경우
+				}
+				break;
 		}
 		
 		request.setCharacterEncoding("utf-8");
@@ -43,7 +51,11 @@ public class RequestTest02 extends HttpServlet {
 		out.println("<h1>계산 결과</h1>");
 		out.println("<br><hr><br>");
 		
-		out.printf("<p>%d %s %d = %.1f<p><br>",input1, op, input2, result);
+		if(calcOk) {
+			out.printf("<p>%d %s %d = %.1f<p><br>",input1, op, input2, result);			
+		} else {
+			out.println("<p>계산에 실패하였습니다</p>");
+		}
 		
 		out.println("</body></html>");
 	}
