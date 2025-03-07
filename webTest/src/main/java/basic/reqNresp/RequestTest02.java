@@ -30,6 +30,7 @@ public class RequestTest02 extends HttpServlet {
 			case "/": result = (double)(input1 / input2); break;
 		}
 		
+		request.setCharacterEncoding("utf-8");
 		response.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=utf-8");
 		

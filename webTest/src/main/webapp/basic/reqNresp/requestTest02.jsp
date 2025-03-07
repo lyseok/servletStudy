@@ -11,7 +11,7 @@
 	
 	<br><hr><br>
 	<form action="<%=request.getContextPath() %>/requestTest02.do">
-		<input type="text" name="input1">
+		<input type="text" name="input1" size="5">
 		<select name="op">
 			<option value="+">+</option>
 			<option value="-">-</option>
@@ -19,7 +19,7 @@
 			<option value="/">/</option>
 		</select>
 		<input type="text" name="input2">
-		<input type="submit" value="확인">
+		<input type="submit" value="확인" size="5">
 	</form>
 </body>
 </html>
