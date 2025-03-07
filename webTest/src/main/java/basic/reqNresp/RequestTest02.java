@@ -22,12 +22,12 @@ public class RequestTest02 extends HttpServlet {
 		int input1 = Integer.parseInt(request.getParameter("input1"));
 		int input2 = Integer.parseInt(request.getParameter("input2"));
 		String op = request.getParameter("op");
-		int result = 0;
+		double result = 0;
 		switch(op) {
-			case "+": result = input1 + input2; break;
-			case "-": result = input1 - input2; break;
-			case "*": result = input1 * input2; break;
-			case "/": result = input1 / input2; break;
+			case "+": result = (double)(input1 + input2); break;
+			case "-": result = (double)(input1 - input2); break;
+			case "*": result = (double)(input1 * input2); break;
+			case "/": result = (double)(input1 / input2); break;
 		}
 		
 		response.setCharacterEncoding("utf-8");
@@ -42,7 +42,7 @@ public class RequestTest02 extends HttpServlet {
 		out.println("<h1>계산 결과</h1>");
 		out.println("<br><hr><br>");
 		
-		out.printf("<p>%d %s %d = %d<p><br>",input1, op, input2, result);
+		out.printf("<p>%d %s %d = %.1f<p><br>",input1, op, input2, result);
 		
 		out.println("</body></html>");
 	}
