@@ -1,10 +1,10 @@
 # Servlet Study Project
 
-## 개요
+## ✨ 개요
 
 이 프로젝트는 **Servlet을 활용하여 웹 애플리케이션 개발을 연습**하는 데 중점을 둡니다. **JSP와 함께 서블릿을 사용하여 요청 및 응답을 처리**하며, `web.xml`을 활용한 서블릿 매핑과 **애너테이션 기반 서블릿 등록**을 실습합니다.
 
-## 사용 기술
+## ✨ 사용 기술
 
 - **Java (JDK 11 이상)**: 서블릿 기반 웹 개발
 - **Jakarta Servlet (Servlet API 6.0)**: 요청 및 응답 처리
@@ -13,7 +13,7 @@
 - **웹 애플리케이션 배포 설정**: `web.xml` 설정
 - **애너테이션 기반 서블릿 등록**: `@WebServlet` 활용
 
-## 프로젝트 구조
+## ✨ 프로젝트 구조
 
 ```
 src/
@@ -36,7 +36,7 @@ WEB-INF/
 ├── web.xml                 // 서블릿 매핑 및 웹 애플리케이션 설정
 ```
 
-## 주요 기능
+## ✨ 주요 기능
 
 1. **서블릿 등록 및 실행**
     - `web.xml`을 활용한 서블릿 등록 (`ServletTest01`)
@@ -52,7 +52,7 @@ WEB-INF/
     - JSP에서 클라이언트 입력을 받아 서블릿으로 전달 (`requestTest01.jsp`, `requestTest02.jsp`)
     - JSP에서 서블릿 실행 결과를 받아서 웹 페이지에 출력 (`callServletTest.jsp`)
 
-## 실행 방법
+## ✨ 실행 방법
 
 1. **Tomcat 서버 설정**
     - `web.xml`에서 설정한 URL 매핑을 확인 (`/servletTest01.do`, `/servletTest02.do` 등)
