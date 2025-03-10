@@ -19,7 +19,7 @@ public class FowardTaget extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 이 문서에서는 '문서1'에서 사용하던 Request객체와 Response객체를 같이 사용할 수 있다
+		// 이 문서에서는 '문서1'에서 사용하던 Request 객체와 Response 객체를 같이 사용할 수 있다
 		// 그래서 클라이언트가 '문서1'로 보낸 데이터를 이 문서에서도 받을 수 있다.
 		request.setCharacterEncoding("utf-8");
 		response.setCharacterEncoding("utf-8");
